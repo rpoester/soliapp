@@ -1,0 +1,210 @@
+/* --- Variables de Color para mantener consistencia --- */
+:root {
+    --color-primario: #FF6B6B; /* Un rojo/coral llamativo */
+    --color-secundario: #4ECDC4; /* Un turquesa fresco */
+    --color-oscuro: #292F36;
+    --color-fondo: #F7F9F9;
+    --color-blanco: #FFFFFF;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background-color: var(--color-fondo);
+    color: var(--color-oscuro);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Barra de Navegación Fija --- */
+.navbar {
+    background-color: var(--color-blanco);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Separa los elementos fácilmente */
+    align-items: center;
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-oscuro);
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.menu a:hover {
+    color: var(--color-primario);
+}
+
+.btn-menu {
+    background-color: var(--color-primario);
+    color: var(--color-blanco) !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+/* --- Sección Hero con Degradado y Animación --- */
+.hero {
+    background: linear-gradient(135deg, var(--color-oscuro), #1a1e23);
+    color: var(--color-blanco);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #cccccc;
+}
+
+/* --- Animación de entrada --- */
+@keyframes flotarArriba {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.animado {
+    animation: flotarArriba 1s ease-out;
+}
+
+/* --- Botones --- */
+.boton {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 12px 30px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    display: inline-block;
+}
+
+.boton:hover {
+    background-color: #ff5252;
+    transform: translateY(-3px); /* El botón se eleva un poco al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.boton-grande {
+    font-size: 18px;
+    padding: 15px 40px;
+}
+
+.boton-block {
+    width: 100%;
+}
+
+/* --- Contenedores y Grid (Las 3 columnas) --- */
+.contenedor {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion h2 {
+    font-size: 32px;
+    color: var(--color-oscuro);
+}
+
+.grid-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas exactamente iguales */
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+.tarjeta-feature {
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+}
+
+.tarjeta-feature:hover {
+    transform: translateY(-10px); /* Efecto de tarjeta flotante */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* --- Banner intermedio --- */
+.banner-accion {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* --- Formulario --- */
+.tarjeta-formulario {
+    background: var(--color-blanco);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #eeeeee;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Evita que el input se salga de la caja */
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: var(--color-primario);
+    outline: none;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--color-oscuro);
+    color: #aaaaaa;
+}
